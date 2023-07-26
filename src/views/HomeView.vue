@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <p>hello {{ data }}</p>
+    <p v-for="single in data" :key="single.id">
+     <img :src="single.image.url" width="500" height="400" />
+    </p>
   </div>
 </template>
 
@@ -11,16 +13,18 @@ export default {
 
   data(){
     return{
-      data: []
+      data: [],
+      currentPage: 0,
     }
   },
 
   methods:{
     getDogs(){
-      this.$http.get(`?limit=10?api_key=${process.env.VUE_APP_DOG_API_KEY}`)
+      // this.$http.get(`?limit=20?page=0-2`)
+      this.$http.get(`?limit=15&page=${this.currentPage}`)
       .then(response =>{
-        console.log(response)
-        this.data = response
+        console.log(response.data)
+        this.data = response.data
       }).catch(error =>{
         console.log(error)
       })
