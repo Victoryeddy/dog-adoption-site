@@ -1,18 +1,42 @@
 <template>
-  <div class="home container mx-auto">
-    <div class="grid grid-cols-3 gap-4">
-      
-      <div v-for="single in data" :key="single.id">
-       <img :src="single.image.url" width="400" height="400" />
+  <div class="home">
+    <Navbar />
+    <div class="bg-primary">
+      <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 gap-3 relative top-20">
+          <div class="">
+            <p class="text-5xl text-white font-bold mt-10">
+              Find Your Furry Friend: Where Paws Meet Hearts!
+            </p>
+            <p class="text-white mt-6 text-xl">
+              Our mission is to connect these precious pups with compassionate
+              families and individuals who are ready to embrace the joy of pet
+              adoption.
+            </p>
+            <p class="mt-7"><button class="rounded-full bg-white py-5 px-10 shadow-sm font-medium">Get Started</button></p>
+          </div>
+          <div>
+            <img src="../assets/dog-for-home-page.png" alt="" />
+          </div>
+        </div>
+        <!-- <div v-for="single in data" :key="single.id">
+         <img :src="single.image.url" width="400" height="400" />
+        </div> -->
       </div>
-   </div>
+    </div>
+    <img src="../assets/wave.svg" alt="" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import Navbar from "../components/Navbar.vue"
+
 export default {
   name: "HomeView",
+  components: {
+    Navbar,
+  },
 
   data() {
     return {
@@ -41,3 +65,4 @@ export default {
   },
 }
 </script>
+
