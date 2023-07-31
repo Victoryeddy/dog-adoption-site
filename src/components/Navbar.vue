@@ -4,7 +4,7 @@
       <!-- <div> -->
         <img src="../assets/Dog_logo.jpeg" alt="" width="100" height="50" />
       <!-- </div> -->
-      <div class="flex items-center collapse md:visible">
+      <div class="hidden lg:flex lg:items-center">
         <router-link class="px-3 font-medium"  to="/">Home</router-link>
         <router-link class="px-3 font-medium" to="/">About</router-link>
         <router-link class="px-3 font-medium" to="/">Services</router-link>
