@@ -13,16 +13,32 @@
               families and individuals who are ready to embrace the joy of pet
               adoption.
             </p>
-            <p class="mt-7">
-              <button
-                class="rounded-full bg-white py-5 px-10 shadow-sm font-medium"
-              >
+            <p class="mt-12">
+              <button class="rounded-full bg-white py-5 px-10 shadow-sm font-medium">
                 Get Started
               </button>
             </p>
           </div>
-          <div>
+          <div class="relative">
             <img src="../assets/dog-for-home-page.png" alt="" />
+            <div class="bg-white absolute px-10 py-3 left-[14rem] bottom-8 h-20 shadow-lg rounded-full">
+              <div class="grid grid-cols-3 gap-5">
+                <div>
+                  <p class="text-center">9</p>
+                  <p>Rescues</p>
+                </div>
+                <div>
+                  <p class="text-center">9</p>
+
+                  <p>Shelters</p>
+                </div>
+                <div>
+                  <p class="text-center">9</p>
+
+                  <p>Breeds</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- <div v-for="single in data" :key="single.id">
@@ -32,8 +48,10 @@
     </div>
 
     <!-- small screen -->
-    <div class="lg:hidden block bg-primary  container mx-auto">
-      <div class="grid grid-cols-1 gap-2 py-3">
+    <!-- <div class="container mx-auto "> -->
+
+    <div class="lg:hidden block bg-primary px-6">
+      <div class="grid grid-cols-1 gap-1 py-3">
         <p class="text-3xl text-white font-bold mt-10">
           Find Your Furry Friend: Where Paws Meet Hearts!
         </p>
@@ -42,19 +60,37 @@
           families and individuals who are ready to embrace the joy of pet
           adoption.
         </p>
-        <p class="mt-7">
-          <button
-            class="rounded-full bg-white py-5 px-10 shadow-sm font-medium"
-          >
+        <p class="mt-12">
+          <button class="rounded-full bg-white py-5 px-10 shadow-sm font-medium">
             Get Started
           </button>
         </p>
       </div>
-      <div class="grid grid-cols-1 gap-2 py-2">
+      <div class="grid grid-cols-1 gap-2 py-2 relative">
         <img src="../assets/dog-for-home-page.png" alt="" />
+        <div class="bg-white absolute px-10 py-3 md:left-48 bottom-0 h-20 shadow-lg rounded-full">
+          <div class="grid grid-cols-3 gap-7">
+            <div>
+              <p class="text-center">9</p>
+              <p>Rescues</p>
+            </div>
+            <div>
+              <p class="text-center">9</p>
+
+              <p>Shelters</p>
+            </div>
+            <div>
+              <p class="text-center">9</p>
+
+              <p>Breeds</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <img src="../assets/wave.svg" alt="" />
+    <!-- </div> -->
+    <img src="../assets/wave.svg" alt="" class="border-0" />
   </div>
 </template>
 
@@ -95,3 +131,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.left-13 {
+  left: 15rem !important;
+}
+</style>
