@@ -18,7 +18,8 @@ module.exports = {
       },
       inset: {
         '14rem': '14rem',
-      }
+      },
+     
       
     },
   },
