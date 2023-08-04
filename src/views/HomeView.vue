@@ -203,14 +203,12 @@
 <script>
 // @ is an alias to /src
 import Navbar from "../components/Navbar.vue"
-import { Carousel3d, Slide } from 'vue-carousel-3d';
 
 export default {
   name: "HomeView",
   components: {
     Navbar,
-    Carousel3d,
-    Slide
+   
   },
 
   data() {
