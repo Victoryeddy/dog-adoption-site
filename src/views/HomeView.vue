@@ -176,17 +176,41 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="container mx-auto">
+        <h2 class="text-center font-extrabold text-4xl"> Testimonials</h2>
+        <div class="flex justify-center mt-16">
+
+          <div v-for="(user, index) in userList" :key="user.id">
+
+            <carousel-3d>
+              <slide :index="index">
+               content
+                <img :src="user.picture" alt="" width="100" height="100" class="me-3">
+              </slide>
+
+            </carousel-3d>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Navbar from "../components/Navbar.vue"
+import { Carousel3d, Slide } from 'vue-carousel-3d';
 
 export default {
   name: "HomeView",
   components: {
     Navbar,
+    Carousel3d,
+    Slide
   },
 
   data() {
@@ -198,7 +222,10 @@ export default {
       breedsCount: 0,
       rescueLimit: 9,
       shelterLimit: 282,
-      breedsLimit: 9
+      breedsLimit: 9,
+
+      // usersList
+      userList: [],
     }
   },
 
@@ -216,6 +243,16 @@ export default {
         })
     },
 
+    getFakeUsers() {
+      this.$httpUsers.get(`user?&limit=7`).then(response => {
+        console.log(response.data.data)
+        this.userList = response.data.data
+      }).catch(error => {
+        console.log(error);
+      });
+    },
+
+
     counter() {
       const startRescueCount = setInterval(() => this.rescueCount < this.rescueLimit ? this.rescueCount++ : clearInterval(startRescueCount), 100)
       const startShelterCount = setInterval(() => this.shelterCount < this.shelterLimit ? this.shelterCount++ : clearInterval(startShelterCount), 5)
@@ -225,13 +262,17 @@ export default {
   },
 
   mounted() {
-    this.getDogs()
+    this.getDogs();
+    this.getFakeUsers();
     this.counter();
   },
 }
 </script>
 
 <style scoped>
+/* *{
+  outline:2px solid blue;
+} */
 .left-13 {
   left: 15rem !important;
 }
