@@ -179,24 +179,28 @@
 
     <section>
       <div class="container mx-auto">
-        <h2 class="text-center font-extrabold text-4xl"> Testimonials</h2>
-        <div class="flex justify-center mt-16">
+        <h2 class="text-center font-extrabold text-4xl">Customer Review</h2>
+        <!-- <div class="flex"> -->
 
-          <div v-for="(user, index) in userList" :key="user.id">
+        <div class=" mt-16 overflow-x-scroll flex">
 
-            <carousel-3d>
-              <slide :index="index">
-               content
-                <img :src="user.picture" alt="" width="100" height="100" class="me-3">
-              </slide>
+          <div v-for="(user, index) in mergedData" :key="user.id" class="card  mx-2 flex justify-between flex-col p-3">
+            <div>
 
-            </carousel-3d>
+              <img :src="user.picture" alt="" width="150" height="150" class="rounded-full shadow-sm">
+            </div>
+            <div class="flex items-stretch flex-col">
+
+              <p class="font-medium text-center mt-4 text-center"> {{ user.firstName }} {{ user.lastName }}</p>
+              <p class="font-medium text-center mt-2"> {{ user.rating }}</p>
+            </div>
           </div>
         </div>
+        <!-- </div> -->
+
+
       </div>
     </section>
-
-
   </div>
 </template>
 
@@ -208,7 +212,6 @@ export default {
   name: "HomeView",
   components: {
     Navbar,
-   
   },
 
   data() {
@@ -224,6 +227,52 @@ export default {
 
       // usersList
       userList: [],
+      mergedData: [],
+      //reviews 
+      reviews: [
+        {
+          "name": "Sarah Johnson",
+           "rating": "⭐⭐⭐⭐⭐ ",
+          "content": "I recently bought the most adorable Golden Retriever puppy from this dog shop, and I couldn't be happier! The staff was incredibly helpful and knowledgeable, guiding me through the process of choosing the perfect pup for my family."
+        },
+        {
+          "name": "Mark Anderson",
+          "rating": "⭐⭐⭐⭐ ",
+          "content": "I had a pleasant experience buying a Dachshund puppy from this dog shop. The place was clean and well-maintained, and the staff seemed caring towards the dogs. "
+        },
+        {
+          "name": "Emily Parker",
+           "rating": "⭐⭐⭐⭐⭐  ",
+          "content": "This dog shop is simply fantastic! I bought a Labrador puppy from them, and it was love at first sight. "
+        },
+        {
+          "name": "Michael Ramirez",
+           "rating": "⭐⭐⭐⭐⭐  ",
+          "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually."
+        },
+        {
+          "name": "Jennifer Lee",
+           "rating": "⭐⭐⭐⭐  ",
+          "content": "What a wonderful dog shop! I adopted a mixed-breed rescue dog from them, and the experience was heartwarming. The staff members genuinely care for the dogs and do an amazing job matching them with the right families. My rescue pup was a bit timid at first, but with patience and love, she has become the sweetest and most loving companion. "
+        },
+        {
+          "name": "Victory Ndu",
+           "rating": "⭐⭐⭐⭐⭐ ",
+          "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually. The puppy's health and condition were good"
+        },
+        {
+          "name": "Mariam Ndu",
+           "rating": "⭐⭐⭐⭐ ",
+          "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually. The puppy's health and condition were good"
+        },
+        {
+          "name": "Lee Ndu",
+           "rating": "⭐⭐⭐⭐ ",
+
+          "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually. The puppy's health and condition were good"
+        },
+
+      ]
     }
   },
 
@@ -242,9 +291,19 @@ export default {
     },
 
     getFakeUsers() {
-      this.$httpUsers.get(`user?&limit=7`).then(response => {
-        console.log(response.data.data)
+      this.$httpUsers.get(`user?&limit=8`).then(response => {
+    
         this.userList = response.data.data
+       this.mergedData =  this.userList.map((user , index) =>{
+          const review = this.reviews[index];
+
+          const mergedObjects = {
+            ...user,
+            ...review
+          }
+          return mergedObjects;
+        })
+        console.log(this.mergedData)
       }).catch(error => {
         console.log(error);
       });
@@ -260,7 +319,7 @@ export default {
   },
 
   mounted() {
-    this.getDogs();
+    // this.getDogs();
     this.getFakeUsers();
     this.counter();
   },
@@ -268,9 +327,14 @@ export default {
 </script>
 
 <style scoped>
-/* *{
-  outline:2px solid blue;
+/* * {
+  outline: 2px solid blue;
 } */
+
+.scroller {
+  overflow-x: scroll;
+}
+
 .left-13 {
   left: 15rem !important;
 }
