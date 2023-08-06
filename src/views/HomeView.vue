@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Navbar />
     <section class="header">
 
       <div class="bg-primary hidden lg:flex">
@@ -16,7 +15,7 @@
                 adoption.
               </p>
               <p class="mt-12">
-                <button class="rounded-full bg-white py-5 px-10 shadow-sm font-medium">
+                <button class="rounded-full bg-white py-5 px-10 drop-shdaow-lg font-medium">
                   Browse
                 </button>
               </p>
@@ -59,7 +58,7 @@
             adoption.
           </p>
           <p class="mt-12">
-            <button class="rounded-full bg-white py-5 px-10 shadow-sm font-medium">
+            <button class="rounded-full bg-white py-5 px-10 drop-shadow-lg font-medium">
               Browse
             </button>
           </p>
@@ -182,7 +181,7 @@
         <h2 class="text-center font-extrabold text-4xl">Customer Review</h2>
         <!-- <div class="flex"> -->
 
-        <div class=" mt-16 overflow-x-scroll flex">
+        <div class=" mt-16 overflow-x-scroll flex p-3">
 
           <div v-for="(user, index) in mergedData" :key="user.id" class="card  mx-2 flex justify-between flex-col p-3">
             <div>
@@ -191,7 +190,7 @@
             </div>
             <div class="flex items-stretch flex-col">
 
-              <p class="font-medium text-center mt-4 text-center"> {{ user.firstName }} {{ user.lastName }}</p>
+              <p class="font-medium text-center mt-4"> {{ user.firstName }} {{ user.lastName }}</p>
               <p class="font-medium text-center mt-2"> {{ user.rating }}</p>
             </div>
           </div>
@@ -201,18 +200,96 @@
 
       </div>
     </section>
+
+    <section class="py-10 border-0 mt-24">
+      <div class="container mx-auto px-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-2">
+          <div>
+
+            <p class="text-gray-500 text-2xl ">Don't miss this amazing big events <br class="hidden lg:block"/>conference and opportunities!</p>
+          </div>
+          <div class="flex items-center relative">
+            <input placeholder="Enter your email address"
+              class="border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500 focus:border-primary focus:outline-none rounded-md min-w-full p-4 drop-shadow-lg" />
+            <button class="bg-primary text-white absolute right-0 p-4 rounded-md">
+              SUBSCRIBE
+            </button>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+    <img src="../assets/footerWave.svg" alt="" class="border-0 mt-15">
+
+    <footer class="bg-primary">
+      <div class="container mx-auto px-3">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-20 gap-3 pb-16">
+          <div>
+            <img src="../assets/Dog_logo.jpeg" alt="" width="100" height="100">
+             <p class="text-xl text-white font-bold mt-4">
+                  Find Your Furry Friend: Where Paws Meet Hearts!
+                </p>
+                <p class="text-white mt-2 text-md">
+                  Our mission is to connect these precious pups with compassionate
+                  families and individuals who are ready to embrace the joy of pet
+                  adoption.
+                </p>
+          </div>
+          <div>
+            <img src="../assets/Dog_logo.jpeg" alt="" width="100" height="100" class="invisible">
+
+            <p class="text-xl my-4 text-white font-bold">Our Services</p>
+            <ul>
+              <li  class="my-3"><router-link to="/" class="text-white">House Sitting</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Drop-in Visits</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Doggy Care</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Dog Walking</router-link></li>
+             
+            </ul>
+          </div>
+          <div>
+            <img src="../assets/Dog_logo.jpeg" alt="" width="100" height="100" class="invisible">
+
+            <p class="text-xl my-4 text-white font-bold">About</p>
+            <ul>
+              <li  class="my-3"><router-link to="/" class="text-white">About Us</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Our Team</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Contact</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">shampoo</router-link></li>
+             
+            </ul>
+          </div>
+          <div>
+            <img src="../assets/Dog_logo.jpeg" alt="" width="100" height="100" class="invisible">
+
+            <p class="text-xl my-4 text-white font-bold">Help</p>
+            <ul>
+              <li  class="my-3"><router-link to="/" class="text-white">Booking</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Pricing</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">WishList</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Terms of Service</router-link></li>
+              <li class="my-3"><router-link to="/" class="text-white">Privacy Policy</router-link></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Navbar from "../components/Navbar.vue"
 
 export default {
   name: "HomeView",
-  components: {
-    Navbar,
-  },
+
 
   data() {
     return {
@@ -232,7 +309,7 @@ export default {
       reviews: [
         {
           "name": "Sarah Johnson",
-           "rating": "⭐⭐⭐⭐⭐ ",
+          "rating": "⭐⭐⭐⭐⭐ ",
           "content": "I recently bought the most adorable Golden Retriever puppy from this dog shop, and I couldn't be happier! The staff was incredibly helpful and knowledgeable, guiding me through the process of choosing the perfect pup for my family."
         },
         {
@@ -242,37 +319,37 @@ export default {
         },
         {
           "name": "Emily Parker",
-           "rating": "⭐⭐⭐⭐⭐  ",
+          "rating": "⭐⭐⭐⭐⭐  ",
           "content": "This dog shop is simply fantastic! I bought a Labrador puppy from them, and it was love at first sight. "
         },
         {
           "name": "Michael Ramirez",
-           "rating": "⭐⭐⭐⭐⭐  ",
+          "rating": "⭐⭐⭐⭐⭐  ",
           "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually."
         },
         {
           "name": "Jennifer Lee",
-           "rating": "⭐⭐⭐⭐  ",
+          "rating": "⭐⭐⭐⭐  ",
           "content": "What a wonderful dog shop! I adopted a mixed-breed rescue dog from them, and the experience was heartwarming. The staff members genuinely care for the dogs and do an amazing job matching them with the right families. My rescue pup was a bit timid at first, but with patience and love, she has become the sweetest and most loving companion. "
         },
         {
           "name": "Victory Ndu",
-           "rating": "⭐⭐⭐⭐⭐ ",
+          "rating": "⭐⭐⭐⭐⭐ ",
           "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually. The puppy's health and condition were good"
         },
         {
           "name": "Mariam Ndu",
-           "rating": "⭐⭐⭐⭐ ",
+          "rating": "⭐⭐⭐⭐ ",
           "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually. The puppy's health and condition were good"
         },
         {
           "name": "Lee Ndu",
-           "rating": "⭐⭐⭐⭐ ",
+          "rating": "⭐⭐⭐⭐ ",
 
           "content": "I recently purchased a Siberian Husky from this dog shop, and the dog itself is absolutely stunning. However, I noticed that the shop was quite crowded, and it was challenging to get the attention of the staff. Despite this, they managed to assist me eventually. The puppy's health and condition were good"
         },
 
-      ]
+      ],
     }
   },
 
@@ -292,9 +369,9 @@ export default {
 
     getFakeUsers() {
       this.$httpUsers.get(`user?&limit=8`).then(response => {
-    
+
         this.userList = response.data.data
-       this.mergedData =  this.userList.map((user , index) =>{
+        this.mergedData = this.userList.map((user, index) => {
           const review = this.reviews[index];
 
           const mergedObjects = {
@@ -337,5 +414,16 @@ export default {
 
 .left-13 {
   left: 15rem !important;
+}
+
+/* For transition effect */
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(0);
 }
 </style>
