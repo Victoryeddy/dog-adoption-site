@@ -120,7 +120,7 @@
         </p>
         <p class="mt-9 mx-auto w-1/2 text-center">
           <button
-            class="rounded-full bg-primary py-5 px-10 drop-shadow-lg font-medium text-white hover:outline hover:text-primary hover:bg-transparent"
+            class="rounded-full bg-primary py-5 px-7 drop-shadow-lg font-medium text-white"
           >
             See all Pets
           </button>
@@ -253,18 +253,37 @@
     </section>
 
     <section
-      class="py-10 bg-fixed bg-center bg-cover"
-      style="
-        background-image: url('../assets/modern.jpeg');
-      "
+      class="bg-fixed bg-center bg-cover py-10"
+      :style="`background-image: url(${require('../assets/modern.jpeg')})`"
+      style="background-blend-mode: multiply; background-color: #0000006e"
     >
-      
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit velit
-        dolor qui corrupti, asperiores quam, quisquam adipisci odio eveniet
-        dolorem saepe eligendi molestias iste iusto ab nobis a voluptate autem
-        aut. Tempora molestiae maiores ipsa fugit ipsum dolores obcaecati nemo.
-      </p>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 pt-20 gap-3 pb-16">
+          <div class="flex justify-center">
+            <img src="../assets/play-circle.svg" alt="" width="100" />
+          </div>
+          <div>
+            <div class="flex flex-col justify-end">
+              <span class="text-[#B44625] text-end"
+                >Find your Dog<span
+                  class="capitalize border-s-4 border-[#B44625] ms-2"
+                ></span
+              ></span>
+              <h2 class="font-bold text-4xl mt-2 mb-3 text-white text-end">
+                Dogs Are Not Our Whole Life, but They Make Our Life Whole
+              </h2>
+              <p class="flex justify-end mt-6">
+
+                <button
+                  class="rounded-full bg-primary py-5 px-12 drop-shadow-lg font-medium text-white  flex"
+                >
+                  Contact Us <img src="../assets/paw-print.svg" alt="" class="ms-2">
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="bg-primary">
