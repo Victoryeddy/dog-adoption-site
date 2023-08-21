@@ -8,7 +8,7 @@
         <router-link class="px-3 font-medium"  to="/">Home</router-link>
         <router-link class="px-3 font-medium" to="/">About</router-link>
         <router-link class="px-3 font-medium" to="/">Services</router-link>
-        <router-link class="px-3 font-medium" to="/">Gallery</router-link>
+        <router-link class="px-3 font-medium" to="/gallery">Gallery</router-link>
         <router-link class="px-3 font-medium" to="/">Blog</router-link>
         <router-link class="px-3 font-medium" to="/">Contact</router-link>
       </div>
