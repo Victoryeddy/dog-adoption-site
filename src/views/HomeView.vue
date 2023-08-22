@@ -110,7 +110,7 @@
         <h2 class="text-center font-extrabold text-4xl">
           Say Hello To Your New Family Member
         </h2>
-        <p class="text-center mt-5 lg:w-3/4 mx-auto text-gray-500">
+        <p class="text-center mt-5 lg:w-3/4 mx-auto text-[#949494]">
           As their warm, fuzzy paws enter your lives, you'll be enchanted by the
           unconditional love and boundless joy they offer, creating lasting
           memories and unforgettable moments. From the playful romps in the park
@@ -142,7 +142,7 @@
               <div class="mb-6">
                 <!-- <img src="../assets/stethoscope.svg" alt="" width="100" height="100"> -->
                 <h5 class="font-medium text-2xl">Vet</h5>
-                <p class="mt-2 text-gray-500">
+                <p class="mt-2 text-[#949494]">
                   We take pride in our state-of-the-art facilities and
                   cutting-edge medical technology, which allow us to diagnose
                   and treat various health conditions accurately and
@@ -160,7 +160,7 @@
               </div>
               <div class="mb-6">
                 <h5 class="font-medium text-2xl">Training</h5>
-                <p class="mt-2 text-gray-500">
+                <p class="mt-2 text-[#949494]">
                   Our team of certified and experienced dog trainers is
                   committed to using positive reinforcement techniques to teach
                   your furry friend essential obedience skills and behavior
@@ -174,7 +174,7 @@
               </div>
               <div>
                 <h5 class="font-medium text-2xl">Walks</h5>
-                <p class="mt-2 text-gray-500">
+                <p class="mt-2 text-[#949494]">
                   Whether you have a young and energetic pup or a senior dog in
                   need of a leisurely stroll, we tailor our walks to meet their
                   individual needs. When you entrust your dog to our care, you
@@ -192,7 +192,7 @@
               </div>
               <div>
                 <h5 class="font-medium text-2xl">Salon</h5>
-                <p class="mt-2 text-gray-500">
+                <p class="mt-2 text-[#949494]">
                   Our team of experienced and gentle pet groomers is passionate
                   about providing top-notch care for all breeds and sizes.
                   Whether your dog needs a routine bath, a stylish haircut, or a
@@ -215,7 +215,7 @@
             >
             <h2 class="font-bold text-4xl mt-2 mb-3">Our Client's Review</h2>
 
-            <p class="text-gray-500">
+            <p class="text-[#949494]">
               Our client reviews stand as a testament to the quality and
               dedication we pour into every interaction and transaction. With a
               deep-rooted understanding of the bond between humans and dogs, we
@@ -257,8 +257,8 @@
       :style="`background-image: url(${require('../assets/modern.jpeg')})`"
       style="background-blend-mode: multiply; background-color: #0000006e"
     >
-      <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 pt-20 gap-3 pb-16">
+      <div class="container mx-auto px-3 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 pt-20 gap-3 pb-20">
           <div class="flex justify-center">
             <img src="../assets/play-circle.svg" alt="" width="100" />
           </div>
@@ -273,35 +273,68 @@
                 Dogs Are Not Our Whole Life, but They Make Our Life Whole
               </h2>
               <p class="flex justify-end mt-6">
-
                 <button
-                  class="rounded-full bg-primary py-5 px-12 drop-shadow-lg font-medium text-white  flex"
+                  class="rounded-full bg-primary py-5 px-12 drop-shadow-lg font-medium text-white flex"
                 >
-                  Contact Us <img src="../assets/paw-print.svg" alt="" class="ms-2">
+                  Contact Us
+                  <img src="../assets/paw-print.svg" alt="" class="ms-2" />
                 </button>
               </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-primary rounded-md lg:absolute lg:top-[20rem] lg:left-[13rem] p-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 pt-8 gap-3 pb-6">
+            <div class="flex justify-center">
+              <img
+                src="../assets/mail-open.svg"
+                alt=""
+                width="100"
+                height="100"
+                class="mb-3 me-2"
+              />
+              <p class="flex flex-col justify-center">
+                <span class="text-white text-sm font-light mt-5"
+                  >Keep Updated</span
+                >
+                <span class="text-3xl font-bold text-white">NewsLetter</span>
+              </p>
+            </div>
+            <div class="flex items-center">
+              <input
+                type="email"
+                class="invalid:border-red-500 valid:border-white border-b-2 bg-transparent focus:outline-none lg:w-2/5 w-4/5 ms-3 lg:ms-0 placeholder-white mb-4 lg:mb-0"
+                placeholder="e.g vick@gmail.com"
+              />
+              <button
+                class="rounded-md bg-white py-4 px-10 drop-shadow-lg font-medium text-primary ms-3 flex"
+              >
+              <img src="../assets/send.svg" alt="" class="me-2" />
+                Subscribe
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-primary">
-      <div class="container mx-auto px-3">
+    <footer class="bg-black ">
+      <div class="container mx-auto px-3 pt-16">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-20 gap-3 pb-16"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-20 gap-2 pb-16"
         >
           <div>
             <img
-              src="../assets/Dog_logo.jpeg"
+              src="../assets/Dog_logo-removebg-preview.png"
               alt=""
               width="100"
               height="100"
             />
-            <p class="text-xl text-white font-bold mt-4">
+            <p class="text-xl text-[#949494] font-bold mt-4">
               Find Your Furry Friend: Where Paws Meet Hearts!
             </p>
-            <p class="text-white mt-2 text-md">
+            <p class="text-[#949494] mt-2 text-md">
               Our mission is to connect these precious pups with compassionate
               families and individuals who are ready to embrace the joy of pet
               adoption.
@@ -316,48 +349,23 @@
               class="invisible"
             />
 
-            <p class="text-xl my-4 text-white font-bold">Our Services</p>
+            <p class="text-xl my-4 text-[#949494] font-bold">Our Services</p>
             <ul>
               <li class="my-3">
-                <router-link to="/" class="text-white"
+                <router-link to="/" class="text-[#949494]"
                   >House Sitting</router-link
                 >
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white"
+                <router-link to="/" class="text-[#949494]"
                   >Drop-in Visits</router-link
                 >
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white">Doggy Care</router-link>
+                <router-link to="/" class="text-[#949494]">Doggy Care</router-link>
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white">Dog Walking</router-link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <img
-              src="../assets/Dog_logo.jpeg"
-              alt=""
-              width="100"
-              height="100"
-              class="invisible"
-            />
-
-            <p class="text-xl my-4 text-white font-bold">About</p>
-            <ul>
-              <li class="my-3">
-                <router-link to="/" class="text-white">About Us</router-link>
-              </li>
-              <li class="my-3">
-                <router-link to="/" class="text-white">Our Team</router-link>
-              </li>
-              <li class="my-3">
-                <router-link to="/" class="text-white">Contact</router-link>
-              </li>
-              <li class="my-3">
-                <router-link to="/" class="text-white">shampoo</router-link>
+                <router-link to="/" class="text-[#949494]">Dog Walking</router-link>
               </li>
             </ul>
           </div>
@@ -370,24 +378,49 @@
               class="invisible"
             />
 
-            <p class="text-xl my-4 text-white font-bold">Help</p>
+            <p class="text-xl my-4 text-[#949494] font-bold">About</p>
             <ul>
               <li class="my-3">
-                <router-link to="/" class="text-white">Booking</router-link>
+                <router-link to="/" class="text-[#949494]">About Us</router-link>
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white">Pricing</router-link>
+                <router-link to="/" class="text-[#949494]">Our Team</router-link>
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white">WishList</router-link>
+                <router-link to="/" class="text-[#949494]">Contact</router-link>
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white"
+                <router-link to="/" class="text-[#949494]">shampoo</router-link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="../assets/Dog_logo.jpeg"
+              alt=""
+              width="100"
+              height="100"
+              class="invisible"
+            />
+
+            <p class="text-xl my-4 text-[#949494] font-bold">Help</p>
+            <ul>
+              <li class="my-3">
+                <router-link to="/" class="text-[#949494]">Booking</router-link>
+              </li>
+              <li class="my-3">
+                <router-link to="/" class="text-[#949494]">Pricing</router-link>
+              </li>
+              <li class="my-3">
+                <router-link to="/" class="text-[#949494]">WishList</router-link>
+              </li>
+              <li class="my-3">
+                <router-link to="/" class="text-[#949494]"
                   >Terms of Service</router-link
                 >
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-white"
+                <router-link to="/" class="text-[#949494]"
                   >Privacy Policy</router-link
                 >
               </li>
@@ -475,22 +508,11 @@ export default {
   },
 
   methods: {
-    getDogs() {
-      // this.$http.get(`?limit=20?page=0-2`)
-      this.$http
-        .get(`?limit=15&page=${this.currentPage}`)
-        .then((response) => {
-          console.log(response.data);
-          this.data = response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
+   
 
     getFakeUsers() {
       this.$httpUsers
-        .get(`user?&limit=5`)
+        .get(`user?&limit=8`)
         .then((response) => {
           this.userList = response.data.data;
           this.mergedData = this.userList.map((user, index) => {
@@ -536,7 +558,7 @@ export default {
 
   mounted() {
     // this.getDogs();
-    // this.getFakeUsers();
+    this.getFakeUsers();
     this.counter();
   },
 };
@@ -555,14 +577,8 @@ export default {
   left: 15rem !important;
 }
 
-/* For transition effect */
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.5s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateX(0);
+/* To hide all scrollbar */
+::-webkit-scrollbar {
+  display: none !important;
 }
 </style>
