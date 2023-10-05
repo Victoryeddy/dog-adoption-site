@@ -284,7 +284,9 @@
           </div>
         </div>
 
-        <div class="bg-primary rounded-md lg:absolute lg:top-[20rem] lg:left-[13rem] p-2">
+        <div
+          class="bg-primary rounded-md lg:absolute lg:top-[20rem] lg:left-[13rem] p-2"
+        >
           <div class="grid grid-cols-1 md:grid-cols-2 pt-8 gap-3 pb-6">
             <div class="flex justify-center">
               <img
@@ -310,7 +312,7 @@
               <button
                 class="rounded-md bg-white py-4 px-10 drop-shadow-lg font-medium text-primary ms-3 flex"
               >
-              <img src="../assets/send.svg" alt="" class="me-2" />
+                <img src="../assets/send.svg" alt="" class="me-2" />
                 Subscribe
               </button>
             </div>
@@ -319,7 +321,7 @@
       </div>
     </section>
 
-    <footer class="bg-black ">
+    <footer class="bg-black">
       <div class="container mx-auto px-3 pt-16">
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-20 gap-2 pb-16"
@@ -362,10 +364,14 @@
                 >
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-[#949494]">Doggy Care</router-link>
+                <router-link to="/" class="text-[#949494]"
+                  >Doggy Care</router-link
+                >
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-[#949494]">Dog Walking</router-link>
+                <router-link to="/" class="text-[#949494]"
+                  >Dog Walking</router-link
+                >
               </li>
             </ul>
           </div>
@@ -381,10 +387,14 @@
             <p class="text-xl my-4 text-[#949494] font-bold">About</p>
             <ul>
               <li class="my-3">
-                <router-link to="/" class="text-[#949494]">About Us</router-link>
+                <router-link to="/" class="text-[#949494]"
+                  >About Us</router-link
+                >
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-[#949494]">Our Team</router-link>
+                <router-link to="/" class="text-[#949494]"
+                  >Our Team</router-link
+                >
               </li>
               <li class="my-3">
                 <router-link to="/" class="text-[#949494]">Contact</router-link>
@@ -412,7 +422,9 @@
                 <router-link to="/" class="text-[#949494]">Pricing</router-link>
               </li>
               <li class="my-3">
-                <router-link to="/" class="text-[#949494]">WishList</router-link>
+                <router-link to="/" class="text-[#949494]"
+                  >WishList</router-link
+                >
               </li>
               <li class="my-3">
                 <router-link to="/" class="text-[#949494]"
@@ -508,8 +520,6 @@ export default {
   },
 
   methods: {
-   
-
     getFakeUsers() {
       this.$httpUsers
         .get(`user?&limit=8`)

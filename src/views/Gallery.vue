@@ -14,20 +14,28 @@
     </section>
 
     <section class="py-16">
-      <div class="container mx-auto">
-        <div class="grid grid-cols-3 gap-2">
-          <div v-for="item in data" :key="item.id" class="dog-card">
-            <div>
+      <div class="container mx-auto px-2">
+        <div class="flex justify-center" v-if="loading">
+          <img src="../assets/480 (1).gif" alt="">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2" v-else>
+          <div v-for="item in data" :key="item.id">
+            <div class="dog-card">
               <div class="w-full h-60">
                 <img
                   :src="item.url"
                   alt=""
-                  class="w-full h-full object-cover"
+                  class="w-full h-full"
                 />
               </div>
-              <p>Hello world</p>
               <div class="overlay"></div>
             </div>
+            <p class="mt-7">Name: {{ item.breeds.length !== 0 ? item.breeds[0].name : "No Data" }}</p>
+            <p>Speciality: {{ item.breeds.length !== 0 ? item.breeds[0].bred_for : "No Data" }}</p>
+            <p>Breed Group: {{ item.breeds.length !== 0 ? item.breeds[0].breed_group : "No Data" }}</p>
+            <p>Temperament: {{item.breeds.length !== 0 ? item.breeds[0].temperament : "No Data" }}</p>
+            <p>Width: {{ item.width }}</p>
+            <p>Height: {{ item.height }}</p>
           </div>
         </div>
       </div>
@@ -40,6 +48,7 @@ export default {
     return {
       currentPage: 1,
       data: [],
+      loading:true
     };
   },
   methods: {
@@ -47,7 +56,8 @@ export default {
       this.$http
         .get(`search?limit=20&api_key=${process.env.VUE_APP_DOG_API_KEY}`)
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
+          this.loading = false;
           this.data = response.data;
         })
         .catch((error) => {
@@ -56,14 +66,14 @@ export default {
     },
   },
   mounted() {
-    this.getDogs();
+    // this.getDogs();
   },
 };
 </script>
 <style scoped>
-* {
+/* * {
   outline: 2px solid blue;
-}
+} */
 
 .dog-card {
   position: relative;
