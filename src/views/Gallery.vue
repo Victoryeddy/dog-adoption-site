@@ -60,7 +60,7 @@ export default {
   methods: {
     getDogs() {
       this.$http
-        .get(`search?limit=20&api_key=${process.env.VUE_APP_DOG_API_KEY}`)
+        .get(`search?limit=18&api_key=${process.env.VUE_APP_DOG_API_KEY}`)
         .then((response) => {
           // console.log(response.data);
           this.loading = false;

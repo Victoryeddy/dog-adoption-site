@@ -15,8 +15,8 @@
         <router-link class="px-3 font-medium" to="/gallery"
           >Gallery</router-link
         >
-        <router-link class="px-3 font-medium" to="/">Blog</router-link>
-        <router-link class="px-3 font-medium" to="/">Contact</router-link>
+        <!-- <router-link class="px-3 font-medium" to="/">Blog</router-link> -->
+        <!-- <router-link class="px-3 font-medium" to="/">Contact</router-link> -->
       </div>
     </div>
   </div>
