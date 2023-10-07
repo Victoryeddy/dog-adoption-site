@@ -15,11 +15,11 @@
         <router-link class="px-3 font-medium" to="/gallery"
           >Gallery</router-link
         >
-        <div v-if="!$auth.loading">
+        <div v-if="!$auth.loading" class="ms-4">
           <!-- show login when not authenticated -->
-          <button v-if="!$auth.isAuthenticated" @click="login">Log in</button>
+          <button v-if="!$auth.isAuthenticated" @click="login" class="btn">Log in</button>
           <!-- show logout when authenticated -->
-          <button v-if="$auth.isAuthenticated" @click="logout">Log out</button>
+          <button v-if="$auth.isAuthenticated" @click="logout" class="btn">Log out</button>
         </div>
         <!-- <router-link class="px-3 font-medium" to="/">Blog</router-link> -->
         <!-- <router-link class="px-3 font-medium" to="/">Contact</router-link> -->
