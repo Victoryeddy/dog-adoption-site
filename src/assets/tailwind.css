@@ -19,7 +19,7 @@
   }
 
   .btn-outline{
-    @apply outline outline-primary outline-2 bg-transparent text-primary;
+    @apply py-2 px-4 outline outline-primary outline-2 bg-transparent text-primary;
 
   }
   .btn-outline:hover{
