@@ -17,5 +17,14 @@
   .btn:hover {
     @apply outline outline-primary outline-2 bg-transparent text-primary;
   }
+
+  .btn-outline{
+    @apply outline outline-primary outline-2 bg-transparent text-primary;
+
+  }
+  .btn-outline:hover{
+    @apply py-2 px-4 bg-primary text-white rounded;
+
+  }
   /* ... */
 }

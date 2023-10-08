@@ -11,7 +11,7 @@ import './assets/tailwind.css'
 // Import the plugin here
 import { Auth0Plugin } from './auth';
 
-// Install the authentication plugin here
+// This is the authentication plugin here
 Vue.use(Auth0Plugin, {
   domain: process.env.VUE_APP_0AUTH_DOMAIN,
   clientId: process.env.VUE_APP_0AUTH_CLIENT_ID,
